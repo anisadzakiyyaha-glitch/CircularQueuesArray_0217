@@ -77,7 +77,7 @@ public:
 
     void display()
     {
-        int FRONT_Position = FRONT;
+         int FRONT_Position = FRONT;
         int REAR_Position = REAR;
 
         // cek apakah antrian kosong
@@ -87,4 +87,5 @@ public:
             return;
         }
 
+        cout << "\nElements in the queue are....\n";
     }
