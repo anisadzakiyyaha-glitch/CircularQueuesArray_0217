@@ -51,7 +51,7 @@ public:
 
     void remove()
     {
-         // ccek apakah antrian kosong
+        // ccek apakah antrian kosong
         if (FRONT == -1)
         {
             cout << "Queue underflow\n";
@@ -59,11 +59,18 @@ public:
         }
         cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
-         // cek jika antrian hanya memiliki satu elemen
+        // cek jika antrian hanya memiliki satu elemen
         if (FRONT == REAR)
         {
             FRONT = -1;
             REAR = -1;
         }
-
+        else
+        {
+            // jika elemen yang dihapus berada di posisi terakhir array, kembali ke awal array
+            if (FRONT == max - 1)
+                FRONT = 0;
+            else
+                FRONT = FRONT + 1;
+        }
     }
